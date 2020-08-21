@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.0.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+	
+	<modelVersion>4.0.0</modelVersion>
+    <groupId>com.rose</groupId>
+    <artifactId>rose-orm</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+	
+    <properties>
+        <java.version>1.8</java.version>
+        <sqlite-dialect.version>0.1.0</sqlite-dialect.version>
+        <sqlite-jdbc.version>3.31.1</sqlite-jdbc.version>
+    </properties>
+
+    <modules>
+        <module>rose-sqlite</module>
+        <module>rose-h2</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!--
+                sqlite的依赖包
+            -->
+            <dependency>
+                <groupId>org.xerial</groupId>
+                <artifactId>sqlite-jdbc</artifactId>
+                <version>${sqlite-jdbc.version}</version>
+            </dependency>
+
+            <!-- sqlite的方言包 -->
+            <dependency>
+                <groupId>com.github.gwenn</groupId>
+                <artifactId>sqlite-dialect</artifactId>
+                <version>${sqlite-dialect.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>
