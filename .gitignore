@@ -44,3 +44,4 @@ mvnw.cmd
 .idea/workspace.xml
 rose-orm.iml
 rose.db
+/.idea/
