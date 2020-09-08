@@ -19,12 +19,6 @@
         <!--</dependency>-->
 
         <dependency>
-            <groupId>com.hikvision.starfish</groupId>
-            <artifactId>starfish-configuration</artifactId>
-            <version>1.5.1.RELEASE</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
