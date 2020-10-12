@@ -4,8 +4,6 @@ import com.rose.sqlite.entity.HealthMessageDO;
 import com.rose.sqlite.entity.KeepalivedMessageDO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.hikvision.config.file.ComponentDirectoryPathReader;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
@@ -26,9 +24,6 @@ import java.util.List;
 public class SqliteExecutor {
 
     private static final Logger logger = LoggerFactory.getLogger(SqliteExecutor.class);
-
-    @Autowired
-    private ComponentDirectoryPathReader componentDirectoryPathReader;
 
     private final Object object = new Object();
 

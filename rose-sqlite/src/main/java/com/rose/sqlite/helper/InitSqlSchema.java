@@ -1,7 +1,6 @@
 package com.rose.sqlite.helper;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.hikvision.config.file.ComponentDirectoryPathReader;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -18,9 +17,6 @@ import java.io.File;
  */
 @Component
 public class InitSqlSchema {
-
-    @Autowired
-    private ComponentDirectoryPathReader componentDirectoryPathReader;
 
     @Autowired
     private SqliteExecutor sqliteExecutor;

@@ -1,0 +1,31 @@
+
+server:
+  port: 8082
+  servlet:
+    context-path: /mybatis
+
+# mysql的数据源的配置
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/rose?serverTimezone=GMT&useSSL=true
+    username: root
+    password: zhuchen1994
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# mybatis的配置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.rose.mybatis.entity # 配置 Mapper 对应的 XML 文件路径；
+  configuration:
+    map-underscore-to-camel-case: true # 驼峰命名规范 如：数据库字段是  order_id 那么 实体字段就要写成 orderId
+
+# pagehelper分页插件配置
+pagehelper:
+  helper-dialect: mysql # helperDialect：指定数据库，不指定会自动检测数据库类型
+  # true：页码小于1，查询第一页数据，页码大于总数时，返回最后一页数据；
+  # false：页码小于等于1都返回第一页数据，页码大于总数时返回空
+  reasonable: false
+  params: count=countSql
+  support-methods-arguments: true
+
+

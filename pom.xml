@@ -14,21 +14,24 @@
     <artifactId>rose-orm</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-	
-    <properties>
-        <java.version>1.8</java.version>
-        <sqlite-dialect.version>0.1.0</sqlite-dialect.version>
-        <sqlite-jdbc.version>3.31.1</sqlite-jdbc.version>
-    </properties>
 
     <modules>
         <module>rose-sqlite</module>
         <module>rose-h2</module>
+        <module>rose-mybatis</module>
     </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <sqlite-dialect.version>0.1.0</sqlite-dialect.version>
+        <sqlite-jdbc.version>3.31.1</sqlite-jdbc.version>
+        <mybatis.version>2.1.3</mybatis.version>
+        <pagehelper.version>1.2.13</pagehelper.version>
+        <mybatis-plus.version>3.1.2</mybatis-plus.version>
+    </properties>
 
     <dependencyManagement>
         <dependencies>
-
             <!--
                 sqlite的依赖包
             -->
@@ -37,14 +40,38 @@
                 <artifactId>sqlite-jdbc</artifactId>
                 <version>${sqlite-jdbc.version}</version>
             </dependency>
-
             <!-- sqlite的方言包 -->
             <dependency>
                 <groupId>com.github.gwenn</groupId>
                 <artifactId>sqlite-dialect</artifactId>
                 <version>${sqlite-dialect.version}</version>
             </dependency>
+            <!-- mybatis -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
 
+            <!-- mybatis分页插件 -->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
+
+            <!-- mybatis增加型 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
