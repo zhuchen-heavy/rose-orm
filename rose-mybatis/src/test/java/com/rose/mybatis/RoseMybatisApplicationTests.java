@@ -19,7 +19,7 @@ class RoseMybatisApplicationTests {
 
     @Test
     void contextLoads() {
-        //userMapper.deleteAll();
+        userMapper.deleteAll();
         userMapper.insert(new User("zhangsan", "123456"));
         userMapper.insert(new User("zhangsan", "234567"));
         userMapper.insert(new User("zhangsan", "345678"));

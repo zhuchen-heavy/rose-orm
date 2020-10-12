@@ -10,6 +10,15 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * <p>
+ * mapper：该层仅仅实现最原生的crud，所有的分页均在service层做统一的处理
+ * </p>
+ *
+ * @author: zhu.chen
+ * @date: 2020/10/12
+ * @version: v1.0.0
+ */
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -18,7 +27,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public PageInfo<User> findAllByPage(int page, int offset) {
-        // 这句是分页的核心
+        // 先分页
         PageHelper.startPage(page, offset);
         List<User> all = userMapper.findAll();
         return new PageInfo<>(all);

@@ -28,4 +28,12 @@ pagehelper:
   params: count=countSql
   support-methods-arguments: true
 
+# 打印sql语句
+logging:
+  level:
+    com:
+      rose:
+        mybatis:
+          mapper: debug
+
 
