@@ -17,7 +17,8 @@ public class UserController {
 
     /**
      * http://localhost:8082/mybatis/find?page=1&offset=10 ： 从第一页开始，每页10条
-     * @param page 开始的页
+     *
+     * @param page   开始的页
      * @param offset 偏移量：即每页查询多少条
      * @return
      */
@@ -30,8 +31,9 @@ public class UserController {
     private UserMapper userMapper;
 
     @GetMapping("insert")
-    public String insert(){
+    public String insert() {
         userMapper.insert(new User("zhangsan", "123456"));
         return "ok";
     }
+
 }
