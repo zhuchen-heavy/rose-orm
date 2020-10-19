@@ -1,7 +1,6 @@
 package com.rose.mybatis.mapper;
 
 import com.rose.mybatis.entity.User;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
@@ -16,7 +15,8 @@ import java.util.List;
  * @date: 2020/10/12
  * @version: v1.0.0
  */
-@Mapper
+// {@link org.mybatis.spring.annotation.MapperScan}
+//@Mapper
 public interface UserMapper {
 
     /**
@@ -38,7 +38,6 @@ public interface UserMapper {
      *
      * @return
      */
-    @Select("select * from user")
     List<User> findAll();
 
     /**
