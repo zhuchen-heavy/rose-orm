@@ -21,6 +21,17 @@ public interface UserMapper {
 
     /**
      * <p>
+     * 根据id查询
+     * </p>
+     *
+     * @param id
+     * @return
+     */
+    //@Select("select * from user where id = #{id}")
+    User findById(@Param("id") Integer id);
+
+    /**
+     * <p>
      * 根据username查询
      * 根据注解
      * </p>

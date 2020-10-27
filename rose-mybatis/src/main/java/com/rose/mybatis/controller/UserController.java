@@ -2,7 +2,6 @@ package com.rose.mybatis.controller;
 
 import com.github.pagehelper.PageInfo;
 import com.rose.mybatis.entity.User;
-import com.rose.mybatis.mapper.UserMapper;
 import com.rose.mybatis.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,15 +24,6 @@ public class UserController {
     @GetMapping("find")
     public PageInfo<User> findAllByPage(@RequestParam("page") int page, @RequestParam("offset") int offset) {
         return userService.findAllByPage(page, offset);
-    }
-
-    @Autowired
-    private UserMapper userMapper;
-
-    @GetMapping("insert")
-    public String insert() {
-        userMapper.insert(new User("zhangsan", "123456"));
-        return "ok";
     }
 
 }

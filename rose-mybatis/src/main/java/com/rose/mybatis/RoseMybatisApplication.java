@@ -11,10 +11,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * </p>
  * <p>
  * 较好博客：
- * 1：https://blog.csdn.net/qq924862077/category_9266888_2.html
- * 2：https://www.jianshu.com/p/ec40a82cae28
+ * 1：Mybatis源码解析：https://blog.csdn.net/qq924862077/category_9266888_2.html
+ * 2：Mybatis设计分析：https://www.jianshu.com/p/ec40a82cae28
  * 3：https://snailclimb.gitee.io/javaguide-interview/#/./docs/e-2mybatis
- *
+ * 4：Mybatis缓存：https://tech.meituan.com/2018/01/19/mybatis-cache.html
  * @author: zhu.chen
  * @date: 2020/10/12
  * @version: v1.0.0

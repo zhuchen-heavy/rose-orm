@@ -15,4 +15,18 @@
         select * from user;
     </select>
 
+    <select id="findById" resultType="com.rose.mybatis.entity.User" parameterType="Integer">
+        select * from user where id = #{id}
+    </select>
+
+    <!-- 配置二级缓存 -->
+    <!--
+        配置二级缓存：
+        Cache Hit Ratio [com.rose.mybatis.mapper.UserMapper]: 0.5
+        Cache Hit Ratio [com.rose.mybatis.mapper.UserMapper]: 0.6666666666666666
+
+        二级缓存开启的方式：Configuration中cacheEnabled默认为true + Mapper.xml中配置<cache/>标签
+    -->
+    <cache/>
+
 </mapper>
