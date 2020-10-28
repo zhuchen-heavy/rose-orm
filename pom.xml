@@ -40,12 +40,14 @@
                 <artifactId>sqlite-jdbc</artifactId>
                 <version>${sqlite-jdbc.version}</version>
             </dependency>
+
             <!-- sqlite的方言包 -->
             <dependency>
                 <groupId>com.github.gwenn</groupId>
                 <artifactId>sqlite-dialect</artifactId>
                 <version>${sqlite-dialect.version}</version>
             </dependency>
+
             <!-- mybatis -->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
